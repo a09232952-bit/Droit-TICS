@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz – Introduction au Droit</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+  <header><h1>⚖️ Quiz · Introduction au Droit</h1></header>
+
+  <section id="home">
+    <p>Teste tes connaissances avec des questions tirées de ton cours. Chaque réponse est expliquée.</p>
+    <label>Thème
+      <select id="theme"></select>
+    </label>
+    <label>Nombre de questions
+      <input id="questionCount" type="number" min="1" value="10" inputmode="numeric">
+      <small id="questionLimit"></small>
+    </label>
+    <label class="check"><input type="checkbox" id="shuffle" checked> Mélanger les questions</label>
+    <button id="start" class="btn">Commencer</button>
+  </section>
+
+  <section id="game" hidden>
+    <div class="game-heading">
+      <div class="top"><span id="count"></span><span id="score"></span></div>
+      <button id="menu" class="btn btn-secondary" type="button">← Menu principal</button>
+    </div>
+    <div class="bar"><div id="progress"></div></div>
+    <small id="tag"></small>
+    <h2 id="question"></h2>
+    <div id="options"></div>
+    <div id="explain" hidden></div>
+    <button id="next" class="btn" hidden>Suivant →</button>
+  </section>
+
+  <section id="end" hidden>
+    <h2>Résultat</h2>
+    <p id="final"></p>
+    <div id="review"></div>
+    <button id="restart" class="btn">Recommencer</button>
+  </section>
+</main>
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

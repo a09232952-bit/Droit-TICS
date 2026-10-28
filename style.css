@@ -1,0 +1,28 @@
+:root{--bg:#f3f1ec;--card:#fff;--text:#1d2433;--accent:#7a1f3d;--ok:#1e8e5a;--ko:#c0392b;--line:#ddd8cd}
+@media(prefers-color-scheme:dark){:root{--bg:#14161c;--card:#1e222b;--text:#eceae4;--accent:#d36a8c;--line:#363c49}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia,"Times New Roman",serif;line-height:1.5;padding:16px}
+.card{max-width:720px;margin:0 auto;background:var(--card);border-radius:14px;padding:24px;box-shadow:0 4px 24px #0002}
+h1{font-size:1.4rem;margin:0 0 16px;color:var(--accent)}
+h2{font-size:1.2rem}
+label{display:block;margin:12px 0}
+select,input[type="number"]{width:100%;padding:10px;margin-top:6px;font:inherit;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text)}
+#questionLimit{display:block;color:var(--text);opacity:.7;margin-top:4px}
+.check{display:flex;gap:8px;align-items:center}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:12px 22px;font:inherit;cursor:pointer;margin-top:12px}
+.btn:hover{opacity:.9}
+.game-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.btn-secondary{background:transparent;color:var(--accent);border:1px solid var(--line);padding:8px 12px;margin:0;white-space:nowrap}
+.top{display:flex;justify-content:space-between;font-size:.9rem}
+.bar{height:6px;background:var(--line);border-radius:4px;margin:8px 0 14px}
+#progress{height:100%;width:0;background:var(--accent);border-radius:4px;transition:width .3s}
+#tag{color:var(--accent);text-transform:uppercase;letter-spacing:.05em}
+.opt{display:block;width:100%;text-align:left;padding:12px 14px;margin:8px 0;font:inherit;color:var(--text);background:none;border:1px solid var(--line);border-radius:8px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt.ok{background:#1e8e5a22;border-color:var(--ok)}
+.opt.ko{background:#c0392b22;border-color:var(--ko)}
+.opt:disabled{cursor:default}
+#explain{margin-top:12px;padding:12px 14px;border-left:4px solid var(--accent);background:var(--bg);border-radius:6px}
+.rev{padding:10px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.rev b.ok{color:var(--ok)}.rev b.ko{color:var(--ko)}
+@media(max-width:420px){.game-heading{align-items:flex-start;flex-direction:column;gap:8px}.btn-secondary{align-self:flex-end}}
